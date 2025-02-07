@@ -93,3 +93,95 @@ Tüm hatalar:
 ## Lisans
 
 MIT
+
+## Test Stratejisi
+
+Bu projede kapsamlı bir test yaklaşımı benimsedik:
+
+### Test Çerçeveleri ve Araçları
+
+1. Jest
+   - JavaScript/TypeScript için standart test çerçevesi
+   - Snapshot testing ve code coverage özellikleri
+   - Mocking ve spying yetenekleri
+
+2. React Testing Library
+   - Kullanıcı davranışlarını simüle etmek için
+   - Erişilebilirlik odaklı test yaklaşımı
+   - DOM tabanlı testler
+
+### Test Türleri ve Kapsamı
+
+1. Birim Testler
+   - Bileşen testleri (EventCard, EventList, Header, Login)
+   - Servis testleri (Google Calendar API entegrasyonu)
+   - Props, state ve event yönetimi testleri
+
+2. Entegrasyon Testleri
+   - Bileşenler arası etkileşim
+   - API çağrıları ve veri akışı
+   - Oturum yönetimi
+
+3. Kapsam
+   - Bileşen render testleri
+   - Kullanıcı etkileşimi testleri
+   - Hata durumu yönetimi
+   - Loading durumları
+   - API entegrasyonu
+
+### Mock ve Test Yardımcıları
+
+1. Mock Veriler
+   - Test için örnek event verileri
+   - Mock session bilgileri
+   - API yanıtları
+
+2. Test Utilities
+   - Custom render fonksiyonları
+   - Ortak test yardımcıları
+   - Type tanımlamaları
+
+### Testleri Çalıştırma
+
+```bash
+# Tüm testleri çalıştır
+npm test
+
+# Test coverage raporu oluştur
+npm run test:coverage
+
+# Testleri watch modunda çalıştır
+npm run test:watch
+```
+
+### Test Kapsamı
+
+Testler şu alanları kapsar:
+
+1. Bileşenler
+   - Doğru render
+   - Prop değişiklikleri
+   - Kullanıcı etkileşimleri
+   - Hata durumları
+   - Loading durumları
+
+2. Servisler
+   - API çağrıları
+   - Hata yönetimi
+   - Response parsing
+
+3. Oturum Yönetimi
+   - Giriş/çıkış işlemleri
+   - Oturum durumu kontrolü
+   - Yetkilendirme
+
+4. Veri Akışı
+   - State yönetimi
+   - Props drilling
+   - API entegrasyonu
+
+### Sürekli Entegrasyon
+
+- Her commit'te testler otomatik çalıştırılır
+- Test coverage raporu oluşturulur
+- Minimum %80 test coverage hedefi
